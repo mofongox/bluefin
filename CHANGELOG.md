@@ -7,7 +7,6 @@
   - Joplin Desktop - Note taking and organization
   - Signal Desktop - Secure messaging
   - FileZilla - FTP/SFTP client
-  - OnlyOffice Desktop Editors - Full office suite
   - LibreOffice (Writer, Calc, Impress) - Alternative office suite
   - OBS Studio - Screen recording and streaming
 
@@ -35,15 +34,20 @@
 ### Removed
 - Firefox browser completely removed from system
 - Firefox flatpak configuration removed
+- OnlyOffice Desktop Editors temporarily excluded (COPR `tdb/onlyoffice` does not support Fedora 44 yet; use Flatpak version instead)
+- Beta version builds discontinued - repository now only provides Stable and Latest versions
 
 ### Technical Details
 - COPR repositories added for:
-  - `carlucio/onlyoffice` - OnlyOffice Desktop Editors
   - `henrybolton/librewolf` - Librewolf browser
-  - `zeno/syncthing` - SyncThing and GNOME extension
+  - `zdomain/syncthing-gnome-extension` - SyncThing GNOME extension
+  - `phracek/Brave` - Brave Browser
+  - `copr.fedorainfracloud.org/tcopsey/joplin` - Joplin Desktop
+  - `zeno/alacritty` - Alacritty terminal
 - Firewall service created for GSConnect connectivity
 - User setup hook for terminal and shell defaults
 - System setup hook for GSConnect firewall rules
+- OnlyOffice pending re-addition once COPR supports Fedora 44
 
 ---
 

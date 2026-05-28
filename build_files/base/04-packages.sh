@@ -128,9 +128,6 @@ copr_install_isolated "che/nerd-fonts" "nerd-fonts"
 # From ublue-os/packages
 copr_install_isolated "ublue-os/packages" "uupd"
 
-# OnlyOffice from copr
-copr_install_isolated "copr.fedorainfracloud.org/tdb/onlyoffice" "onlyoffice-desktopeditors"
-
 # Librewolf browser
 copr_install_isolated "henrybolton/librewolf" "librewolf"
 
