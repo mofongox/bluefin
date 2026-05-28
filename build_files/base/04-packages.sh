@@ -128,9 +128,6 @@ copr_install_isolated "che/nerd-fonts" "nerd-fonts"
 # From ublue-os/packages
 copr_install_isolated "ublue-os/packages" "uupd"
 
-# Brave Browser from copr
-copr_install_isolated "phracek/Brave" "brave-browser"
-
 # Joplin Desktop from copr
 copr_install_isolated "copr.fedorainfracloud.org/tcopsey/joplin" "joplin-desktop"
 
