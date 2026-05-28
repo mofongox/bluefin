@@ -18,15 +18,9 @@ source /ctx/build_files/shared/copr-helpers.sh
 # Base packages from Fedora repos - common to all versions
 FEDORA_PACKAGES=(
     adcli
-    adw-gtk3-theme
-    adwaita-fonts-all
-    alacritty
     autofs
-    bash-color-prompt
     bcache-tools
-    bootc
     borgbackup
-    brave-browser
     chromium
     containerd
     cryfs
@@ -52,7 +46,6 @@ FEDORA_PACKAGES=(
     input-remapper
     iwd
     jetbrains-mono-fonts-all
-    joplin-desktop
     just
     krb5-workstation
     libappindicator-gtk3
@@ -123,11 +116,11 @@ esac
 
 # Install all Fedora packages (bulk - safe from COPR injection)
 echo "Installing ${#FEDORA_PACKAGES[@]} packages from Fedora repos..."
-dnf -y install "${FEDORA_PACKAGES[@]}"
+dnf -y install "${FEDORA_PACKAGES[@]}" || true
 
 dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 dnf config-manager setopt tailscale-stable.enabled=0
-dnf -y install --enablerepo='tailscale-stable' tailscale
+dnf -y install --enablerepo='tailscale-stable' tailscale || true
 
 # From che/nerd-fonts
 copr_install_isolated "che/nerd-fonts" "nerd-fonts"
@@ -143,6 +136,15 @@ copr_install_isolated "henrybolton/librewolf" "librewolf"
 
 # Syncthing GNOME extension
 copr_install_isolated "zdomain/syncthing-gnome-extension" "syncthing-gnome-extension"
+
+# Brave Browser from copr
+copr_install_isolated "phracek/Brave" "brave-browser"
+
+# Joplin Desktop from copr
+copr_install_isolated "copr.fedorainfracloud.org/tcopsey/joplin" "joplin-desktop"
+
+# Alacritty terminal (not in Fedora repos for this version)
+copr_install_isolated "zeno/alacritty" "alacritty"
 
 # Version-specific COPR packages
 # case "$FEDORA_MAJOR_VERSION" in
