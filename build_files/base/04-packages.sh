@@ -18,6 +18,7 @@ source /ctx/build_files/shared/copr-helpers.sh
 # Base packages from Fedora repos - common to all versions
 FEDORA_PACKAGES=(
     adcli
+    alacritty
     autofs
     bcache-tools
     borgbackup
@@ -46,6 +47,7 @@ FEDORA_PACKAGES=(
     input-remapper
     iwd
     jetbrains-mono-fonts-all
+    joplin-desktop
     just
     krb5-workstation
     libappindicator-gtk3
@@ -118,17 +120,19 @@ esac
 echo "Installing ${#FEDORA_PACKAGES[@]} packages from Fedora repos..."
 dnf -y install "${FEDORA_PACKAGES[@]}" || true
 
+# COPR packages - installed individually with isolated enablement
+# Note: COPRs may not be available for all Fedora versions, so we use || true to continue build
+
 dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 dnf config-manager setopt tailscale-stable.enabled=0
 dnf -y install --enablerepo='tailscale-stable' tailscale || true
 
-# From che/nerd-fonts
-copr_install_isolated "che/nerd-fonts" "nerd-fonts"
+# From che/nerd-fonts (optional, build continues if unavailable)
+copr_install_isolated "che/nerd-fonts" "nerd-fonts" || true
 
-# From ublue-os/packages
-copr_install_isolated "ublue-os/packages" "uupd"
+# From ublue-os/packages (optional, build continues if unavailable)
+copr_install_isolated "ublue-os/packages" "uupd" || true
 
-# Note: Joplin, Alacritty installed via Flatpak below due to COPR incompatibility with Fedora 44
 
 # Version-specific COPR packages
 # case "$FEDORA_MAJOR_VERSION" in
