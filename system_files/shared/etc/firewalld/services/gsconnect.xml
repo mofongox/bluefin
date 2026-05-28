@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>GSConnect</short>
+  <description>GSConnect KDE Connect protocol for GNOME Shell integration with Android devices</description>
+  <port protocol="tcp" port="1716"/>
+  <port protocol="tcp" port="1764"/>
+  <port protocol="udp" port="1716"/>
+  <port protocol="udp" port="1764"/>
+</service>

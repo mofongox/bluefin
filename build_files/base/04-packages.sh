@@ -20,17 +20,21 @@ FEDORA_PACKAGES=(
     adcli
     adw-gtk3-theme
     adwaita-fonts-all
+    alacritty
     autofs
     bash-color-prompt
     bcache-tools
     bootc
     borgbackup
+    brave-browser
+    chromium
     containerd
     cryfs
     davfs2
     ddcutil
     evtest
     fastfetch
+    filezilla
     firewall-config
     fish
     foo2zjs
@@ -48,6 +52,7 @@ FEDORA_PACKAGES=(
     input-remapper
     iwd
     jetbrains-mono-fonts-all
+    joplin-desktop
     just
     krb5-workstation
     libappindicator-gtk3
@@ -56,12 +61,17 @@ FEDORA_PACKAGES=(
     libgda-sqlite
     libimobiledevice
     libratbag-ratbagd
+    libreoffice-core
+    libreoffice-writer
+    libreoffice-calc
+    libreoffice-impress
     libxcrypt-compat
     lm_sensors
     make
     mesa-libGLU
     mozc
     nautilus-gsconnect
+    obs-studio
     oddjob-mkhomedir
     opendyslexic-fonts
     openssh-askpass
@@ -79,8 +89,10 @@ FEDORA_PACKAGES=(
     samba-winbind-clients
     samba-winbind-modules
     setools-console
+    signal-desktop
     sssd-nfs-idmap
     switcheroo-control
+    syncthing
     tmux
     usbip
     usbmuxd
@@ -122,6 +134,15 @@ copr_install_isolated "che/nerd-fonts" "nerd-fonts"
 
 # From ublue-os/packages
 copr_install_isolated "ublue-os/packages" "uupd"
+
+# OnlyOffice from copr
+copr_install_isolated "copr.fedorainfracloud.org/tdb/onlyoffice" "onlyoffice-desktopeditors"
+
+# Librewolf browser
+copr_install_isolated "henrybolton/librewolf" "librewolf"
+
+# Syncthing GNOME extension
+copr_install_isolated "zdomain/syncthing-gnome-extension" "syncthing-gnome-extension"
 
 # Version-specific COPR packages
 # case "$FEDORA_MAJOR_VERSION" in
