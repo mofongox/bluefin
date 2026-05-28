@@ -14,10 +14,16 @@ flatpak install -y flathub com.brave.Browser
 # Office Suite (OnlyOffice not available in Fedora 44 COPR)
 flatpak install -y flathub org.onlyoffice.desktopeditors
 
-# Note-taking (Joplin COPR incompatible with Fedora 44)
+# Note-taking (Joplin moved to Flatpak for stability)
 flatpak install -y flathub org.joplinapp.Joplin
 
-# Terminal (Alacritty COPR incompatible with Fedora 44)
+# Communication (Signal Desktop moved to Flatpak for stability)
+flatpak install -y flathub org.signal.Signal
+
+# Media Production (OBS Studio moved to Flatpak for stability)
+flatpak install -y flathub com.obsproject.Studio
+
+# Terminal (Alacritty moved to Flatpak for stability)
 flatpak install -y flathub org.alacritty.Alacritty
 
 # Firefox configuration removed - user prefers Librewolf (installed via Flatpak above)

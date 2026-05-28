@@ -47,7 +47,6 @@ FEDORA_PACKAGES=(
     input-remapper
     iwd
     jetbrains-mono-fonts-all
-    joplin-desktop
     just
     krb5-workstation
     libappindicator-gtk3
@@ -66,7 +65,6 @@ FEDORA_PACKAGES=(
     mesa-libGLU
     mozc
     nautilus-gsconnect
-    obs-studio
     oddjob-mkhomedir
     opendyslexic-fonts
     openssh-askpass
@@ -84,7 +82,6 @@ FEDORA_PACKAGES=(
     samba-winbind-clients
     samba-winbind-modules
     setools-console
-    signal-desktop
     sssd-nfs-idmap
     switcheroo-control
     syncthing
