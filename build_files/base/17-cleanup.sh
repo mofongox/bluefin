@@ -11,7 +11,8 @@ systemctl --global enable ublue-user-setup.service
 systemctl enable brew-setup.service
 systemctl enable dconf-update.service
 systemctl enable flatpak-nuke-fedora.service
-systemctl enable input-remapper.service
+# input-remapper service may not exist in all builds, skip if missing
+systemctl enable input-remapper.service || true
 systemctl enable rpm-ostree-countme.service
 systemctl enable tailscaled.service
 systemctl enable ublue-system-setup.service
