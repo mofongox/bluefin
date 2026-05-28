@@ -128,9 +128,6 @@ copr_install_isolated "che/nerd-fonts" "nerd-fonts"
 # From ublue-os/packages
 copr_install_isolated "ublue-os/packages" "uupd"
 
-# Syncthing GNOME extension
-copr_install_isolated "zdomain/syncthing-gnome-extension" "syncthing-gnome-extension"
-
 # Brave Browser from copr
 copr_install_isolated "phracek/Brave" "brave-browser"
 
