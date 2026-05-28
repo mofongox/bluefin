@@ -13,7 +13,6 @@
 - **Browsers**
   - Brave Browser (set as default) - Privacy-focused Chromium browser
   - Chromium - Open-source browser
-  - Librewolf - Privacy-focused Firefox fork
 
 - **System Tools**
   - SyncThing with GNOME extension - Decentralized file synchronization
@@ -35,11 +34,11 @@
 - Firefox browser completely removed from system
 - Firefox flatpak configuration removed
 - OnlyOffice Desktop Editors temporarily excluded (COPR `tdb/onlyoffice` does not support Fedora 44 yet; use Flatpak version instead)
+- Librewolf temporarily excluded (COPR `henrybolton/librewolf` does not support Fedora 44 yet; use Flatpak version instead)
 - Beta version builds discontinued - repository now only provides Stable and Latest versions
 
 ### Technical Details
 - COPR repositories added for:
-  - `henrybolton/librewolf` - Librewolf browser
   - `zdomain/syncthing-gnome-extension` - SyncThing GNOME extension
   - `phracek/Brave` - Brave Browser
   - `copr.fedorainfracloud.org/tcopsey/joplin` - Joplin Desktop
@@ -48,6 +47,7 @@
 - User setup hook for terminal and shell defaults
 - System setup hook for GSConnect firewall rules
 - OnlyOffice pending re-addition once COPR supports Fedora 44
+- Librewolf pending re-addition once COPR supports Fedora 44
 
 ---
 
