@@ -128,11 +128,7 @@ copr_install_isolated "che/nerd-fonts" "nerd-fonts"
 # From ublue-os/packages
 copr_install_isolated "ublue-os/packages" "uupd"
 
-# Joplin Desktop from copr
-copr_install_isolated "copr.fedorainfracloud.org/tcopsey/joplin" "joplin-desktop"
-
-# Alacritty terminal (not in Fedora repos for this version)
-copr_install_isolated "zeno/alacritty" "alacritty"
+# Note: Joplin, Alacritty installed via Flatpak below due to COPR incompatibility with Fedora 44
 
 # Version-specific COPR packages
 # case "$FEDORA_MAJOR_VERSION" in
