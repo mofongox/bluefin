@@ -63,6 +63,7 @@ FEDORA_PACKAGES=(
     lm_sensors
     make
     mesa-libGLU
+    micro
     mozc
     nautilus-gsconnect
     oddjob-mkhomedir
